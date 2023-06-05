@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node CSV File Upload</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Import CSV file</h2>
+    <form action="/import-flights" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" class="form-control" name="flights" accept=".csv" />
+        </div>
+        <div>
+            <input type="submit" class="btn btn-dark" value="Store file" />
+        </div>
+    </form>
+    
+    <h2>Flight Durations</h2>
+    
+    
+
+    <table>
+        <tr>
+            <th>Airport name</th>
+            <th>Country name</th>
+            <th>Airport code</th>
+            <th>Number of passengers it transports annually</th>
+        </tr>
+        <!-- Repeat this row for each flight duration record -->
+        <tr>
+            <td>FL001</td>
+            <td>JFK</td>
+            <td>LHR</td>
+            <td>12 hours</td>
+        </tr>
+        <!-- End of repeat -->
+    </table>
+</body>
+
+</html>
